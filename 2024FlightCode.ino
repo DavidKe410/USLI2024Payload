@@ -79,7 +79,7 @@ void sd_setup(){
     String fileName = "FLIGHT" + String(fileIteration) + ".csv";
 
     char str_array[fileName.length() + 1];
-    fileName.toCharArray(str_array, fileName.length());
+    fileName.toCharArray(str_array, fileName.length()+1);
     buffer = strtok(str_array, " ");
 
     if(!SD.exists(buffer)){
